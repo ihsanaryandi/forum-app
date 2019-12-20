@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+
+    <!-- Custom Style -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <title>Forum</title>
+  </head>
+  <body>
+
+  	<div class="bg-decoration"></div>
+
+  	<!-- ----------------HEADER-SECTION----------------- -->
+  	<header>
+  		<div class="container header-items">
+	  		<div class="logo d-flex align-items-center">
+  				<div class="logo-img">
+  					<a href="#">
+  						<img src="img/logo.png">
+  					</a>
+  				</div>
+  				<div class="company-name ml-3">
+  					<a href="#">SMKN 2 BANDUNG</a>
+  				</div>
+	  		</div>
+	  		<form>
+				<div class="search">
+					<input class="search-input" type="text" name="search" placeholder="Search or jump to..." />
+					<button class="search-btn" title="Search"><i class="fas fa-fw fa-search"></i></button>
+				</div>
+			</form>
+  		</div>
+  	</header>
+
+  	<div class="d-flex">
+	 	<!-- ---------------SIDEBAR--------------- -->
+	 	<aside>
+	 		<div class="side">
+	 			<ul class="side-menu">
+	 				<li class="active">
+	 					<a class="menu-link" href="#">
+	 						<i class="fab fa-fw fa-microsoft"></i>
+	 						Dashboard
+	 					</a>
+	 				</li>
+	 				<li>
+	 					<a class="menu-link" href="#">
+		 					<i class="fas fa-fw fa-search"></i>
+		 					Explore
+		 				</a>
+	 				</li>
+	 				<li>
+	 					<a class="menu-link" href="#">
+		 					<i class="fas fa-fw fa-comment-alt"></i>
+		 					Messages
+		 				</a>
+	 				</li>
+	 				<li>
+	 					<a class="menu-link" href="#">
+		 					<i class="fas fa-fw fa-star"></i>
+		 					Favourites
+		 				</a>
+	 				</li>
+	 				<li>
+	 					<a class="menu-link" href="#">
+		 					<i class="fas fa-fw fa-list"></i>
+		 					Tugas Saya
+		 				</a>
+	 				</li>
+	 				<li>
+	 					<a class="menu-link" href="#">
+		 					<i class="fas fa-fw fa-user"></i>
+		 					My Profile
+		 				</a>
+	 				</li>
+	 			</ul>
+	 		</div>
+	 	</aside>
+
+	 	<main class="py-3">
+	 		<div class="container">
+	 			<h1 class="greeting mb-5">Selamat Datang Kembali, Mamank.</h1>
+		 		<div class="row">
+		 			<div class="col-lg-3">
+		 				<!-- ----------Notification---------- -->
+		 				<div class="custom-card">
+		 					<h5 class="info">Tugas Baru!!</h5>
+		 					<div class="triple-dot-menu">
+		 						<span id="open" data-open="open-menu">...</span>
+		 						<ul class="menus">
+		 							<li>
+		 								<a href="#">Menu 1</a>
+		 							</li>	
+		 							<li>
+		 								<a href="#">Menu 1</a>
+		 							</li>	
+		 							<li>
+		 								<a href="#">Menu 1</a>
+		 							</li>	
+		 						</ul>
+		 					</div>
+		 					<h4 class="title">Tugas Turunan 40 Soal</h4>
+		 					<p class="description">Tugas turunan 40 soal dikerjakan dengan menuliskan soal dan pembahasan dibuku catatan. Soal-soal bisa didapatkan dari file 180 soal turunan. Deadline pengerjaan dan pengumpulan tanggal 20 Desember 2019</p>
+		 					<a href="#" class="detail">
+		 						<i class="fas fa-angle-right"></i>
+		 					</a>
+		 				</div>
+		 				<div class="custom-card">
+		 					<h5 class="info">Balasan Terbaru.</h5>
+		 					<div class="triple-dot-menu">
+		 						<span id="open" data-open="open-menu">...</span>
+		 						<ul class="menus">
+		 							<li>
+		 								<a href="#">Menu 1</a>
+		 							</li>	
+		 							<li>
+		 								<a href="#">Menu 1</a>
+		 							</li>	
+		 							<li>
+		 								<a href="#">Menu 1</a>
+		 							</li>	
+		 						</ul>
+		 					</div>
+		 					<div class="message">
+		 						<div class="person-img">
+		 							<img src="img/logo.png">
+		 						</div>
+		 						<h5 class="person-name">Atqiyaa</h5>
+		 					</div>
+		 					<p class="description">Klo menurut saya sih itu design chartnya kurang pas yah warnanya, kaya beda sendiri gitu. Selebihnyaa sih bagus" aja. Oiya satu lagi klo ada projek" kabarin bisa kali yee...</p>
+		 					<a href="#" class="detail">
+		 						<i class="fas fa-angle-right"></i>
+		 					</a>
+		 				</div>
+
+		 			</div>
+		 		</div>
+	 		</div>
+	 	</main>
+ 	</div>
+
+
+    <script src="js/jquery/jquery.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript">
+
+    	const customCardMenus = document.querySelectorAll('.custom-card ul.menus')
+	    	
+    	document.addEventListener('click', function(e){
+
+    		if(e.target.dataset.open)
+    		{
+
+    			const tripleDots = e.target
+    			const tripleDotsClass = tripleDots.dataset.open
+    			const menu = tripleDots.nextElementSibling
+
+    			if(menu.classList.contains('open-menu'))
+    			{
+    				menu.classList.remove('open-menu')
+    			}
+    			else
+    			{
+    				menu.classList.add('open-menu')
+    			}
+
+    		}
+    		else
+    		{
+
+    			customCardMenus.forEach(menu => {
+
+    				menu.classList.remove('open-menu')
+
+    			})
+
+    		}
+
+    	})
+
+    </script>
+    <!-- <script src="https://www.gstatic.com/charts/loader.js"></script> -->
+
+    <!-- <script type="text/javascript">
+    	
+    	google.charts.load('current', {'packages' : ['corechart']})
+
+    	google.charts.setOnLoadCallback(drawChart)
+
+    	function drawChart(){
+
+    		let data = new google.visualization.DataTable()
+
+    		data.addColumn('string', 'Topping')
+    		data.addColumn('number', 'Slices')
+    		data.addRows([
+    			['Sudah Dinilai', 4],
+    			['Belum Dinilai', 6]
+    		])
+
+    		var options = {
+    			'width' : 400,
+    			'height' : 300,
+    			'backgroundColor' : 'transparent'
+    		}
+
+    		var chart = new google.visualization.PieChart(document.getElementById('pie'))
+    		chart.draw(data, options)
+
+    	}
+
+    </script> -->
+
+  </body>
+</html>

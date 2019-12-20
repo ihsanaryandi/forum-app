@@ -1,0 +1,270 @@
+*, *::before, *::after{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root{
+	--background-color-theme: #f7f7f7;
+	--theme-color: #dfe2eb;
+}
+
+body{
+	background-color: var(--background-color-theme);
+	overflow: hidden;
+}
+
+div.bg-decoration{
+	position: absolute;
+	width: 100%;
+	height: 350px;
+	background-color: var(--theme-color);
+	border-bottom-left-radius: 80%;
+	top: 50px;
+	right: -25vw;
+	z-index: -1;
+}
+
+/*-----------HEADER-SECTION-----------*/
+
+header{
+	background-color: var(--theme-color);
+	padding: 8px 0;
+}
+
+.header-items{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo-img{
+	width: 40px;
+}
+
+.logo-img img{
+	width: 100%;
+}
+
+.company-name a{
+	font-size: 1rem;
+	margin: 0;
+	color: #000;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.search{
+	position: relative;
+	width: 200px;
+	background-color: red;
+}
+
+.search .search-input{
+	width: 100%;
+	border: 1px solid rgba(0, 0, 0, 0.25);
+	padding: 3px 30px 3px 10px;
+	outline: none;
+	font-size: .85rem;
+}
+
+.search .search-input::placeholder{
+	font-size: .85rem;
+}
+
+.search .search-btn{
+	position: absolute;
+	height: 100%;
+	width: 30px;
+	top: 0;
+	right: 0;
+	border: none;
+	background-color: transparent;
+	font-size: .9rem;
+	color: rgba(0, 0, 0, 0.4);
+	transition: .3s ease;
+}
+
+.search .search-btn:hover{
+	color: #000;
+	animation: boing .3s forwards;
+}
+
+@keyframes boing{
+	0%, 100%{
+		transform: translateY(0);
+	}
+
+	50%{
+		transform: translateY(-3px);
+	}
+}
+
+/*------------SIDEBAR------------*/
+
+.side{
+	background-color: #fff;
+	width: 25vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	padding: 2.5rem 0;
+}
+
+.side-menu{
+	list-style: none;
+	margin-left: -50px;
+	/*background-color: green;*/
+}
+
+.side-menu li{
+	padding: .2rem .6rem;
+	margin-bottom: 5px;
+}
+
+.side-menu li.active{
+	position: relative;
+}
+
+.side-menu li.active::before{
+	content: '';
+	position: absolute;
+	width: 3px;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	top: 0;
+	left: 0;
+}
+
+.side-menu li.active .menu-link{
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.side-menu .menu-link{
+	display: flex;
+	text-decoration: none;
+	color: #000;
+	font-weight: 500;
+	font-size: 1.1rem;
+	transition: .3s;
+	align-items: center;
+}
+
+.side-menu .menu-link i{
+	font-size: .7rem;
+	margin-right: .6rem;
+}
+
+.side-menu .menu-link:hover{
+	transform: translateX(5px);
+	color: rgba(0, 0, 0, 0.6);
+}
+
+/*----------------MAIN-SECTION----------------*/
+
+main{
+	width: 100%;
+}
+
+.greeting{
+	font-size: 1.6rem;
+	font-weight: 650;
+}
+
+.custom-card{
+	position: relative;
+	max-height: 210px;
+	background-color: #fff;
+	padding: 1rem 1rem 1.7rem 1rem;
+	margin-bottom: 15px;
+	box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.15);
+}
+
+.custom-card .info{
+	font-size: .7rem;	
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.custom-card .triple-dot-menu{
+	position: absolute;
+	right: calc(1rem / 2);
+	top: calc(1rem / 2);
+}
+
+.custom-card .triple-dot-menu span{
+	color: rgba(0, 0, 0, 0.7);
+	letter-spacing: 1.5px;
+	cursor: pointer;
+}
+
+.custom-card .triple-dot-menu .menus{
+	position: absolute;
+	display: none;
+}
+
+.custom-card .triple-dot-menu .menus.open-menu{
+	display: block;
+}
+
+.custom-card .title{
+	font-size: .9rem;
+	font-weight: 700;
+	text-overflow: ellipsis;
+	width: inherit;
+	overflow: hidden;
+}
+
+.custom-card .description{
+	font-size: .6rem;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	color: rgba(0, 0, 0, 0.7);
+}
+
+.custom-card .detail{
+	position: absolute;
+	text-decoration: none;
+	color: rgba(0, 0, 0, 0.5);
+	bottom: 5px;
+	right: 10px;
+}
+
+.custom-card .message{
+	margin-bottom: 10px;
+	display: flex;
+}
+
+.custom-card .message .person-img{
+	width: 25px;
+	height: 25px;
+	display: inline-block;
+}
+
+.custom-card .message .person-img img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.custom-card .message .person-name{
+	display: inline-block;
+	font-size: .8rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 100px;
+	align-self: center;
+	margin: 0;
+	padding: 0 5px 0 10px;
+}
+
+
+
+
+
+
