@@ -54,7 +54,7 @@
 	 					</a>
 	 				</li>
 	 				<li>
-	 					<a class="menu-link" href="#">
+	 					<a class="menu-link" href="explore.html">
 		 					<i class="fas fa-fw fa-search"></i>
 		 					Explore
 		 				</a>
@@ -96,7 +96,7 @@
 		 				<div class="custom-card">
 		 					<h5 class="info">Tugas Baru!!</h5>
 		 					<div class="triple-dot-menu">
-		 						<span id="open" data-open="open-menu">...</span>
+		 						<button id="open" data-open="open-menu">...</button>
 		 						<ul class="menus">
 		 							<li>
 		 								<a href="#">Menu 1</a>
@@ -118,7 +118,7 @@
 		 				<div class="custom-card">
 		 					<h5 class="info">Balasan Terbaru.</h5>
 		 					<div class="triple-dot-menu">
-		 						<span id="open" data-open="open-menu">...</span>
+		 						<button id="open" data-open="open-menu">...</button>
 		 						<ul class="menus">
 		 							<li>
 		 								<a href="#">Menu 1</a>
@@ -152,74 +152,7 @@
 
     <script src="js/jquery/jquery.js"></script>
     <script src="js/bootstrap/bootstrap.min.js"></script>
-    <script type="text/javascript">
-
-    	const customCardMenus = document.querySelectorAll('.custom-card ul.menus')
-	    	
-    	document.addEventListener('click', function(e){
-
-    		if(e.target.dataset.open)
-    		{
-
-    			const tripleDots = e.target
-    			const tripleDotsClass = tripleDots.dataset.open
-    			const menu = tripleDots.nextElementSibling
-
-    			if(menu.classList.contains('open-menu'))
-    			{
-    				menu.classList.remove('open-menu')
-    			}
-    			else
-    			{
-    				menu.classList.add('open-menu')
-    			}
-
-    		}
-    		else
-    		{
-
-    			customCardMenus.forEach(menu => {
-
-    				menu.classList.remove('open-menu')
-
-    			})
-
-    		}
-
-    	})
-
-    </script>
-    <!-- <script src="https://www.gstatic.com/charts/loader.js"></script> -->
-
-    <!-- <script type="text/javascript">
-    	
-    	google.charts.load('current', {'packages' : ['corechart']})
-
-    	google.charts.setOnLoadCallback(drawChart)
-
-    	function drawChart(){
-
-    		let data = new google.visualization.DataTable()
-
-    		data.addColumn('string', 'Topping')
-    		data.addColumn('number', 'Slices')
-    		data.addRows([
-    			['Sudah Dinilai', 4],
-    			['Belum Dinilai', 6]
-    		])
-
-    		var options = {
-    			'width' : 400,
-    			'height' : 300,
-    			'backgroundColor' : 'transparent'
-    		}
-
-    		var chart = new google.visualization.PieChart(document.getElementById('pie'))
-    		chart.draw(data, options)
-
-    	}
-
-    </script> -->
+    <script src="js/app.js"></script>
 
   </body>
 </html>

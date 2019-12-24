@@ -114,7 +114,7 @@ header{
 
 .side-menu{
 	list-style: none;
-	margin-left: -50px;
+	margin-left: -.6rem;
 	/*background-color: green;*/
 }
 
@@ -194,15 +194,48 @@ main{
 	top: calc(1rem / 2);
 }
 
-.custom-card .triple-dot-menu span{
+.custom-card .triple-dot-menu #open{
 	color: rgba(0, 0, 0, 0.7);
 	letter-spacing: 1.5px;
 	cursor: pointer;
+	border: none;
+	outline: none;
+	background-color: transparent;
 }
 
 .custom-card .triple-dot-menu .menus{
 	position: absolute;
-	display: none;
+	background-color: #eaeaea;
+	list-style: none;
+	top: calc(1rem / 2 + 15px);
+	right: calc(1rem / 10);
+	width: 100px;
+	padding: .5rem .3rem;
+	box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+	transform: scale(0);
+	opacity: 0;
+	transform-origin: top right;
+	transition: .3s ease; 
+}
+
+.custom-card .triple-dot-menu .menus.open-menu{
+	transform: scale(1);
+	opacity: 1;
+}
+
+.custom-card .triple-dot-menu .menus li{
+	text-align: center;
+	margin: 3px 0;
+}
+
+.custom-card .triple-dot-menu .menus li a{
+	text-decoration: none;
+	color: rgba(0, 0, 0, 0.7);
+	font-size: 14px;
+}
+
+.custom-card .triple-dot-menu .menus li a:hover{
+	color: rgba(0, 0, 0, 1);
 }
 
 .custom-card .triple-dot-menu .menus.open-menu{
